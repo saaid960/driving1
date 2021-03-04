@@ -1,0 +1,289 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a574293d92.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <ol><a href="#Home">Home</a>
+            </ol>
+            <ol><a href="#About us">About us</a></ol>
+            <ol><a href="#Courses">Courses</a></ol>
+            <ol><a href="#Pricing">Pricing</a>
+            </ol>
+            <ol><a href="{% url 'Apply' %}">Apply now</a></ol>
+            <ol><a href="#Contacts">Contacts</a></ol>
+        </ul>
+    </div>
+
+    <section id="Home" class="container">
+        <div class="car">
+            <img src="{% static 'images/home.jpg' %}" alt="">
+        </div>
+    </section>
+    <section class="section white" id="About us">
+        <div class="inner">
+            <div class="container">
+
+                <!-- About -->
+                <div class="about">
+                    <h3>About Us</h3>
+                    <hr class="line" />
+                    <h4>Know More About HOPE Driving School</h4>
+                </div> <!-- end .heading -->
+                <div class="m">
+                    <div class="paragraph">
+                        <div class="paragraph1">
+                            <h2 style="text-align: center;width: 100%;margin-bottom: 9px;margin-top: 30px">Who are we?
+                            </h2>
+                            <p>HOPE
+                                Driving School is a leading driving school in the city. We offer complete driving
+                                courses
+                                at the best affordable rates. Our skilled and devoted instructors are able to offer the
+                                best
+                                services to bring out competent drivers that comply with our road regulations and
+                                guidelines</p>
+                        </div> <!-- end .right -->
+
+
+                        <div class="paragraph1">
+                            <h2 style="text-align: center;">Why choose us?</h2>
+                            <p>We offer assessment tests, flexible programmes to suit your schedules, new cars, and
+                                unlimited
+                                theory lessons. We do train with the latest NTSA curriculum to ensure we all come
+                                together to
+                                promote road safety in Kenya. With prior arrangement, we also do pick and/or drop our
+                                students.</p>
+
+                        </div>
+                        <div class="pic">
+                            <img src="{% static 'images/aboutus.jpg' %}" alt="">
+                        </div>
+                    </div> <!-- end .left -->
+
+                </div> <!-- end .about -->
+
+
+            </div> <!-- end .container -->
+        </div> <!-- end .inner -->
+    </section>
+
+    <section class="section blue" id="Courses">
+        <div class="inner">
+            <div class="container">
+
+                <div class="">
+                    <div class="text">
+                        <h3>Courses We Offer</h3>
+                        <hr class="line" />
+                    </div>
+                    <div class="span">
+                        <span>Our Driving School Provide Best Courses For Our Learners. We also offer lessons in basic
+                            mechanics to
+                            ensure that our students pass the driving test.</span>
+                    </div>
+                </div> <!-- end .heading -->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="course">
+                            <div class="course-icon">
+                                <div class="inner">
+                                    <div class="inner"><i class="fa fa-male"></i></div>
+                                </div> <!-- end .inner -->
+                            </div> <!-- end .course-icon -->
+                            <h5>Class B</h5>
+                            <div class="course-info">
+                                <h5>Class B</h5>
+                                <p>Vehicles include light passenger cars</p>
+                                <p><a href="{% url 'Apply' %}">Apply Now <i class="fa fa-angle-double-right"></i></a>
+                                </p>
+                            </div> <!-- end .course-info -->
+                        </div> <!-- end .course -->
+                    </div> <!-- end .col-sm-3 -->
+                    <div class="col-sm-3">
+                        <div class="course">
+                            <div class="course-icon">
+                                <div class="inner">
+                                    <div class="inner"><i class="fa fa-truck"></i></div>
+                                </div> <!-- end .inner -->
+                            </div> <!-- end .course-icon -->
+                            <h5>Class C1</h5>
+                            <div class="course-info">
+                                <h5>Class C1</h5>
+                                <p>Vehicles include light trucks</p>
+                                <p><a href="{% url 'Apply' %}">Apply Now <i class="fa fa-angle-double-right"></i></a>
+                                </p>
+                            </div> <!-- end .course-info -->
+                        </div> <!-- end .course -->
+                    </div> <!-- end .col-sm-3 -->
+                    <div class="col-sm-3">
+                        <div class="course">
+                            <div class="course-icon">
+                                <div class="inner">
+                                    <div class="inner"><i class="fa fa-anchor"></i></div>
+                                </div> <!-- end .inner -->
+                            </div> <!-- end .course-icon -->
+                            <h5>First Aid Course</h5>
+                            <div class="course-info">
+                                <h5>First Aid Course</h5>
+                                <p>We also offer a first aid and fire fighting course</p>
+                                <p><a href="{% url 'Apply' %}">Apply Now <i class="fa fa-angle-double-right"></i></a>
+                                </p>
+                            </div> <!-- end .course-info -->
+                        </div> <!-- end .course -->
+                    </div> <!-- end .col-sm-3 -->
+                    <div class="col-sm-3">
+                        <div class="course">
+                            <div class="course-icon">
+                                <div class="inner">
+                                    <div class="inner"><i class="fa fa-cogs"></i></div>
+                                </div> <!-- end .inner -->
+                            </div> <!-- end .course-icon -->
+                            <h5>Basic Mechanics</h5>
+                            <div class="course-info">
+                                <h5>Basic Mechanics</h5>
+                                <p>We offer lessons in basic mechanics to ensure our students pass the driving test.</p>
+                                <p><a href="{% url 'Apply' %}">Apply Now <i class="fa fa-angle-double-right"></i></a>
+                                </p>
+                            </div> <!-- end .course-info -->
+                        </div> <!-- end .course -->
+                    </div>
+
+                </div><!-- end .col-sm-3 -->
+            </div> <!-- end .row -->
+
+
+
+        </div> <!-- end .container -->
+        </div> <!-- end .inner -->
+    </section> <!-- end .section -->
+    <section class="section white" id="Pricing">
+        <div class="inner">
+            <div class="container">
+
+                <!-- Pricing Tables -->
+                <div class="heading text-center">
+                    <div class='line'>
+
+                        <h3>Our Pricing</h3>
+                        <hr class="line" />
+                    </div>
+                    <span>Our pricing is fair for our offered courses. We accept payments in installments. All charges
+                        are in
+                        KShs. </span>
+                </div> <!-- end .heading -->
+                <div class="row">
+
+                    <div class="pricing-table blue">
+                        <div class="inner">
+                            <div class="pricing-table-price">
+                                <div class="inner">
+                                    <span>500</span>
+                                </div> <!-- end .inner -->
+                            </div> <!-- end .pricing-table-price -->
+                            <div class="pricing-table-heading">
+                                Class B
+                                <small>Per Lesson</small>
+                            </div> <!-- end .pricing-table-heading -->
+                            <div class="pricing-table-features">
+                                <ul class="list-unstyled">
+                                    <li>Light vehicle</li>
+                                </ul>
+                            </div> <!-- end .pricing-table-features -->
+                            <div class="pricing-table-button">
+                                <a href="{% url 'Apply' %}">Apply Now</a>
+                            </div> <!-- end .pricing-table-button -->
+                        </div> <!-- end .inner -->
+                    </div> <!-- end .pricing-table -->
+
+
+                    <div class="pricing-table yellow">
+                        <div class="inner">
+                            <div class="pricing-table-price">
+                                <div class="inner">
+                                    <span class="money">600</span>
+                                </div> <!-- end .inner -->
+                            </div> <!-- end .pricing-table-price -->
+                            <div class="pricing-table-heading">
+                                Class C
+                                <small>Per Lesson</small>
+                            </div> <!-- end .pricing-table-heading -->
+                            <div class="pricing-table-features">
+                                <ul class="list-unstyled">
+                                    <li>Light truck</li>
+                                </ul>
+                            </div> <!-- end .pricing-table-features -->
+                            <div class="pricing-table-button">
+                                <a href="{% url 'Apply' %}">Apply Now</a>
+                            </div> <!-- end .pricing-table-button -->
+                        </div> <!-- end .inner -->
+                    </div> <!-- end .pricing-table -->
+
+                </div> <!-- end .row -->
+
+            </div> <!-- end .container -->
+        </div> <!-- end .inner -->
+    </section> <!-- end .section -->
+    <section class="contact" id="Contacts">
+        <div class="section-center clearfix">
+            <!-- contact info -->
+            <article class="contact-info">
+                <!-- contact item -->
+                <div class="contact-item">
+                    <!-- contact text -->
+                    <h3 class="contact-title">
+                        <span class="contact-icon">
+                            <i class="fas fa-location-arrow"></i> </span>address
+                    </h3>
+                    <h3 class="contact-text">
+                        MFUFUDUDU STREET
+                    </h3>
+                </div>
+                <!-- end of contact item -->
+                <!-- contact item -->
+                <div class="contact-item">
+                    <!-- contact text -->
+                    <h3 class="contact-title">
+                        <span class="contact-icon"> <i class="fas fa-envelope"></i> </span>email
+                    </h3>
+                    <h3 class="contact-text">
+                        email@email.com
+                    </h3>
+                </div>
+                <!-- end of contact item -->
+                <!-- contact item -->
+                <div class="contact-item">
+                    <!-- contact text -->
+                    <h3 class="contact-title">
+                        <span class="contact-icon">
+                            <i class="fas fa-location-arrow"></i> </span>telephone
+                    </h3>
+                    <h3 class="contact-text">
+                        + 123 456 789
+                    </h3>
+                </div>
+                <!-- end of contact item -->
+            </article>
+            <article class="contact-form">
+                <form action="" method="post"> {% csrf_token %}
+                    <input type="text" name="name" placeholder="name" class="form-control" />
+                    <input type="email" name="email" placeholder="email" class="form-control" />
+                    <textarea name="message" placeholder="message" class="form-control"></textarea>
+                    <button class="main-btn">send</button>
+                </form>
+            </article>
+            <!-- end of contact info -->
+        </div>
+    </section>
+</body>
+
+</html>
