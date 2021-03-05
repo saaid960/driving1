@@ -57,23 +57,19 @@ hr.line {
   margin-bottom: 20px;
 }
 .pic {
-  margin-left: 90rem;
+  margin-left: 30rem;
   margin-top: -730px;
-  margin-bottom: 4rem;
+  margin-bottom: 9rem;
 }
 
 .paragraph1 {
   box-sizing: border-box;
   width: 200px;
-  font-size: 20px;
-  margin: 40px;
+  font-size: larger;
+  margin-left: 6rem;
+  margin-bottom: 17rem;
 }
-.paragraph2 {
-  width: 200px;
-  font-size: 20px;
 
-  top: 0;
-}
 #Courses {
   background-color: rgb(145, 192, 139);
   margin-top: 0f;
