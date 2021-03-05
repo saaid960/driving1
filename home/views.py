@@ -16,7 +16,7 @@ def Applypage(request):
         context.save()
     return render(request, "home/Apply.html")
 
-def contactpage(request):
+def Applypage(request):
     if request.method == 'POST':
         name = request.POST['name']
         email = request.POST['email']
