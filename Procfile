@@ -1,1 +1,1 @@
-web: gunicorn Driving.wsgi
+web: gunicorn Drivingschool.wsgi
