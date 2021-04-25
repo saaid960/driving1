@@ -1,0 +1,107 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    body {
+        background-color: #051d36;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+
+    input::placeholder {
+        color: #d3d3d3;
+    }
+
+    .submit {
+        background-color: #6BA3E8;
+    }
+
+    .center-column {
+        width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 6px 2px 30px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .btn-info {
+        width: 40%;
+        padding: 12px 20px;
+        margin-left: 10pc;
+        box-sizing: border-box;
+    }
+
+
+    .btn-danger {
+        background-color: #352c1b;
+        border-color: #e59400;
+    }
+
+    .menu {
+        text-align: center;
+        font-size: 20px;
+        color: aliceblue;
+    }
+
+    a {
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+
+
+    li {
+        padding: 20px;
+        display: inline-flex;
+    }
+
+    .message {
+        color: white;
+    }
+
+    h3 {
+        color: black;
+
+    }
+</style>
+
+<ul class="menu">
+    <li><a href="{% url 'video' %}">Tutorial</a></li>
+    <li><a href="{%url 'home'%}">log out</a></li>
+    <li><a href="#About us"></a></li>
+    <span class="message">Hello, {{request.user}}</span>
+
+</ul>
+
+<div class="center-column">
+
+
+    <h3>Add The days for Practice</h3>
+    {%for todo_item in todo_items%}
+
+    {{todo_item.content}}
+    <div class="todo-list">
+        <form action="/deletetodo/{{todo_item.id}}/" style="display: inline" method="post">
+            {% csrf_token %}
+
+            <input class="btn btn-sm btn-danger" type="submit" value="Delete" />
+        </form>
+
+        {%endfor%}
+
+
+        <form action="/add/" method="post">
+            {% csrf_token %}
+            <input type="text" name="content" />
+            <input class="btn btn-info" type="submit" value="Add" />
+    </div>
+
+    </form>
+
+</div>

@@ -17,13 +17,23 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from home import views
-from home.views import home, Applypage
+from home.views import home, registerpage, loginpage, logoutuser, video, index, addTodo, deleteTodo
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("Apply/", views.Applypage, name="Apply"),
-    path("", home),
+    path("Apply/", views.registerpage, name="Apply"),
+    path('', views.home, name="home"),
     
+    
+    path('todo/', views.index, name="index"),
+    path('add/', addTodo),
+    path('deletetodo/<int:i_id>/', deleteTodo),
+
+    path('register/', registerpage, name="register"),
+    path('login/', views.loginpage, name="login"),
+    path('logout/', views.logoutuser, name="logout"),
+
+    path('video/', views.video, name="video"),
 ]
 urlpatterns += staticfiles_urlpatterns()
